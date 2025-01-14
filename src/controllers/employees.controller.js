@@ -6,7 +6,8 @@ export const getEmployees = async (req, res) => {
         res.json(rows)
     } catch (error){
         return res.status(500).json({
-            message: "something goes wrong"
+            message: "something goes wrong",
+            detailt: error.message
         })
     }
     
@@ -21,7 +22,8 @@ export const getEmployee = async (req, res) => {
         res.json(rows[0])
     } catch (error){
         return res.status(500).json({
-            message: "something goes wrong"
+            message: "something goes wrong",
+            detailt: error.message
         })
     }
 }
@@ -36,7 +38,8 @@ export const deleteEmployee = async (req, res) => {
         res.sendStatus(204)
     } catch (error){
         return res.status(500).json({
-            message: "something goes wrong"
+            message: "something goes wrong",
+            detailt: error.message
         })
     }
 }
@@ -52,7 +55,8 @@ export const createEmployee = async (req, res) => {
         })
     } catch (error){
         return res.status(500).json({
-            message: "something goes wrong"
+            message: "something goes wrong",
+            detailt: error.message
         })
     }
 }
@@ -70,7 +74,8 @@ export const updateEmployee = async (req, res) => {
         res.json(rows[0])
     } catch (error) {
         return res.status(500).json({
-            message: "something goes wrong"
+            message: "something goes wrong",
+            detailt: error.message
         })
     }
 }
